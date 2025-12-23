@@ -1,0 +1,307 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Base styles */
+:root {
+  --primary-dark: #1a3b1a;
+  --primary-sage: #87a96b;
+  --primary-mint: #a8d8a8;
+  --secondary-brown: #6b5b47;
+  --accent-gold: #d4af37;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+  line-height: 1.6;
+}
+
+.font-heading {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Hero section */
+.hero-bg {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-sage) 50%, var(--primary-mint) 100%);
+}
+
+/* Order form customization */
+.orderonline-embed-form {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  border: 1px solid rgba(135, 169, 107, 0.3);
+}
+
+.orderonline-embed-form input,
+.orderonline-embed-form select,
+.orderonline-embed-form textarea {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(135, 169, 107, 0.3);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  font-family: 'Inter', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.orderonline-embed-form input:focus,
+.orderonline-embed-form select:focus,
+.orderonline-embed-form textarea:focus {
+  outline: none;
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.3);
+}
+
+.orderonline-embed-form button {
+  background: var(--accent-gold);
+  color: var(--primary-dark);
+  border: none;
+  border-radius: 0.75rem;
+  padding: 1rem 2rem;
+  font-weight: 700;
+  font-size: 1.125rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.orderonline-embed-form button:hover {
+  background: #c49f27;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-content {
+    text-align: center;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+  }
+  
+  .orderonline-embed-form {
+    padding: 1.5rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Utility classes */
+.bg-primary-dark {
+  background-color: var(--primary-dark);
+}
+
+.bg-primary-sage {
+  background-color: var(--primary-sage);
+}
+
+.bg-primary-mint {
+  background-color: var(--primary-mint);
+}
+
+.bg-secondary-brown {
+  background-color: var(--secondary-brown);
+}
+
+.bg-accent-gold {
+  background-color: var(--accent-gold);
+}
+
+.text-primary-dark {
+  color: var(--primary-dark);
+}
+
+.text-primary-sage {
+  color: var(--primary-sage);
+}
+
+.text-primary-mint {
+  color: var(--primary-mint);
+}
+
+.text-secondary-brown {
+  color: var(--secondary-brown);
+}
+
+.text-accent-gold {
+  color: var(--accent-gold);
+}
+
+.border-primary-sage {
+  border-color: var(--primary-sage);
+}
+
+.border-accent-gold {
+  border-color: var(--accent-gold);
+}
+
+/* Glassmorphism effect */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Hover effects */
+.hover-lift {
+  transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Section spacing */
+.section-padding {
+  padding: 5rem 0;
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: var(--accent-gold);
+  color: var(--primary-dark);
+  font-weight: 700;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-primary:hover {
+  background-color: #c49f27;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-secondary:hover {
+  background-color: white;
+  color: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+/* Card styles */
+.card {
+  background: white;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+/* Image hover effect */
+.image-hover {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5rem;
+}
+
+.image-hover img {
+  transition: transform 0.5s ease;
+}
+
+.image-hover:hover img {
+  transform: scale(1.05);
+}
+
+.image-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-hover:hover::before {
+  opacity: 1;
+}
+
+/* Gallery image adjustments */
+#gallery .grid img {
+  width: 100%;
+  height: auto;
+  max-height: 320px;
+  object-fit: contain;
+}
+/* Testimonial stars */
+.star-rating {
+  color: var(--accent-gold);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(to right, var(--primary-dark), var(--accent-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Responsive typography */
+.responsive-heading {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+.responsive-subheading {
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-gold);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c49f27;
+}
